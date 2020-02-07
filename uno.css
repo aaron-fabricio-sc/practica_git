@@ -1,0 +1,117 @@
+body{
+    font-family: 'Arvo', serif;
+}
+
+nav{
+    background: purple;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin:auto;
+    
+
+}
+.menu{
+
+    display: inline-block;
+    padding: 10px;
+    background: rgb(39, 187, 187);
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+   
+
+}
+.btn{
+    display: none;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    font-weight: bold;
+}
+.columna{
+    margin: 40px 10px;
+    border: 2px rgb(0, 0, 0) solid;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+    background: rgba(64, 112, 90,0.5);
+    border-radius: 15px;
+    width: 22%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.712);
+}
+
+.precio{
+    color: rgb(35, 99, 218);
+    font-size: 50px;
+}
+.btnprecio{
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+}
+.btnprecio:hover{
+    box-shadow: 3px 3px 6px 2px black;
+    background: rgb(39, 187, 187);
+}
+ .pa{
+     margin: auto;
+     background: gray;
+     display: flex;
+     width:90%;
+     height: auto;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-content: space-around;
+     
+ }
+ .ele{
+
+     margin: 20px;
+     padding: 20px;
+     border: 2px solid black;
+     background: bisque;
+     width: 150px;
+     height: 100px;
+     flex-grow: 1;
+ }
+
+@media (max-width:1000px){
+    .columna{
+        width: 45%;
+    }
+}
+
+@media (max-width:600px){
+    nav{
+        background: black;
+        flex-direction: column;
+     
+    }
+    .menu{
+    
+        margin: 2px;
+    }
+    .btn{
+        display: inline-block;
+    }
+    .desaparece{
+        transition: all 1s ease;
+        display: none;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+    .columna{
+        width: 90%;
+    }
+}
+
+
