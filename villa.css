@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    background: rgb(109, 54, 54);
+    color: white;
+}
+body{
+    background: green;
+}
+button{
+    padding: 15px;
+    color: white;
+    background: black;
+    transform: translateX(50%);
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<p id="numeros">
+
+</p>
+<body>
+    <script>
+        var caja=document.getElementById('numeros');
+        var n=100;
+        for(i=0; i<n; i++)
+        {
+           
+            if(i % 3==0)
+            {
+                caja.innerHTML += "fizz";
+            } 
+            if(i % 5 == 0){
+                caja.innerHTML += "bozz";
+            }
+            
+            if(i % 3!=0 && i % 5!=0)
+            {
+                caja.innerHTML += i;
+            }
+            
+                
+            
+           
+            caja.innerHTML += "<br />"
+            
+        }
+    </script>
+</body>
+</html>

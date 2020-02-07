@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">mira mi gato</p>
+    <button  id ="cambio">presioname</button>
+
+    <p id="up">CAMBIO DE tamaño</p>
+    <button id="aumento" onclick="aum()">aumento</button>
+    <button id="disminuir" onclick="dis()">disminuir</button>
+
+    <p id="inser"></p>
+
+    <p id="valor"></p>
+
+    <h1 id="palabra">insertar algo:</h1>
+
+    <h2 id="tipo"></h2>
+    <script >
+
+        
+        // tamaño de letra
+        
+        var aumento= document.getElementById('aumento');
+        var disminuir= document.getElementById('disminuir');
+
+        function aum(){
+            var text = document.getElementById("up").innerHTML;
+  document.getElementById("up").innerHTML = text.toUpperCase();
+        }
+        function dis(){
+            var text = document.getElementById("up").innerHTML;
+  document.getElementById("up").innerHTML = text.toLowerCase();
+        }
+
+       
+    // insertar
+    var palabra="texo insertado";
+
+    document.getElementById('inser').innerHTML= palabra.charAt(2);
+
+//---------------------
+
+
+
+
+
+
+//cortar una palabra
+        var x ="tomate todo el jugo"
+        var y =x.substr(7);
+        
+        // alert(y);
+//----------------
+
+
+
+// cambio de palabras
+  var bn = document.getElementById('cambio');
+
+  bn.addEventListener('click', cambio);
+        
+
+        function cambio(){
+            var texto =document.getElementById("p1").innerHTML;
+           var remplazo= texto.replace("gato","loro");
+           document.getElementById("p1").innerHTML = remplazo;
+        }
+        //-----------
+
+
+        //valor de un numero
+
+        var x= 500
+        var y= new Number(500);
+
+        document.getElementById('valor').innerHTML= x===y;
+
+        document.getElementById('palabra').innerHTML +=" texto insertado";
+
+        //tipo de dato
+        var x= 1123;
+        var y = x.toString();
+
+        document.getElementById('tipo').innerHTML=y;
+
+
+        var numero1= prompt()
+        var numero2= prompt()
+        parseInt(numero1);
+        parseInt(numero2);
+        var numero3 =parseInt(numero1 + numero2);
+        alert(numero3);
+    </script>
+</body>
+</html>
