@@ -3,19 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="cssb/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nuevo.css">    
+    <title>Pruebas JS</title>
 </head>
-<body>
-
-
-    <div>
-        <p>hola hol</p>
+<body style="background: black;">
+    <div class="container text-uppercase bg-dark text-info text-center mt-5 p-4">
+        <h1>pruebas de javascript</h1>
+    </div>
+    <div class="container">
+        <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dolorem provident porro? Odit quisquam cumque laudantium eos aut, sed asperiores error accusantium modi iure? Repellat itaque dolorem deleniti nemo eius.</p>
+    </div>
+    <div class="container">
+        <button id="btn" class="btn btn-info">CAMBIOS</button>
     </div>
 
-    <head></head>
+    
+    <div class="container">
+        <p id="suma" style="color: white;">la suma de los numeros es: </p>
+    </div>
+
+    <div class="container">
+        <h2  style="color: blanchedalmond;">objetos</h2>
+        <p id="objetos" style="color: blanchedalmond;"></p>
+    </div>
+    <div class="container apiborde">
+        <h2 style="color: blanchedalmond;">CONSUMINEDO APIS</h2>
+    </div>
+
+
 
     <footer></footer>
     <script >
+        // cambios en el DOM
+
+        var parrafo =document.getElementById("parrafo");
+
+        parrafo.style.color = "white";
+
+        var btn = document.getElementById("btn");
+        /*function cambiar() {
+            parrafo.style.color = "red" 
+        }
+
+        btn.onclick= cambiar;*/
+
+        btn.addEventListener('click', function() {
+            parrafo.style.color = "red" 
+            suma.innerHTML += sumar(100,10);
+        })
+        // funcion de flecha 
+        var suma = document.getElementById("suma");
+        var sumar = (num1,num2) => num1+num2;
+       
+        // Objetos
+        var objetos =[{
+            nombre: "html",
+            numero: 15,
+            valor: true
+        }];
+
+        var texto = document.getElementById('objetos')
+        for(var i of objetos){
+            texto.innerHTML = i.nombre;
+            texto.innerHTML +=" ,"+i.numero;
+            texto.innerHTML +=" ,"+i.valor;
+        };
+
         var arreglo =[5,6,8,"hola"];
 
         for(i=0;i<4;i++){
